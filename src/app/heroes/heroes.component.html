@@ -1,0 +1,23 @@
+<!--
+ *
+ 管道是格式化字符串、金额、日期和其它显示数据的好办法。 Angular 发布了一些内置管道，而且你还可以创建自己的管道。
+-->
+<!-- 绑定表达式中的 uppercase 位于管道操作符（ | ）的右边，用来调用内置管道 UppercasePipe。 -->
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <!-- (click) ：事件绑定    [class.selected]:切换css的样式类-->
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
+<!--  *ngIf: 不为空 -->
+<div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedHero.id}}</div>
+    <div>
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+
+</div>

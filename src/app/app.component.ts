@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-07-06 14:26:53
+ * @LastEditTime: 2021-07-06 15:16:07
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \angular\my-app\src\app\app.component.ts
+ */
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +14,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Tour of Heroes';
 }
